@@ -136,13 +136,13 @@ WITH RowNumCTE AS (
 SELECT *,
 	ROW_NUMBER() OVER (
 	Partition by ParcelID,
-				PropertyAddress,
-				SalePrice,
-				SaleDate,
-				LegalReference
-				ORDER BY
-					UniqueID
-					) row_num
+			PropertyAddress,
+			SalePrice,
+			SaleDate,
+			LegalReference
+			ORDER BY
+				UniqueID
+				) row_num
 
 From PortfolioProject..NashvilleHousing
 --ORDER BY ParcelID
@@ -157,13 +157,13 @@ WITH RowNumCTE AS (
 SELECT *,
 	ROW_NUMBER() OVER (
 	Partition by ParcelID,
-				PropertyAddress,
-				SalePrice,
-				SaleDate,
-				LegalReference
-				ORDER BY
-					UniqueID
-					) row_num
+			PropertyAddress,
+			SalePrice,
+			SaleDate,
+			LegalReference
+			ORDER BY
+				UniqueID
+				) row_num
 
 From PortfolioProject..NashvilleHousing
 --ORDER BY ParcelID
@@ -180,4 +180,4 @@ SELECT *
 FROM PortfolioProject..NashvilleHousing
 
 ALTER TABLE PortfolioProject..NashvilleHousing
-DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress,SaleDate (--didnot run this as it would delete the column)
+DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress,SaleDate 
